@@ -122,13 +122,17 @@ body{
 
     width:100%;
 
-    aspect-ratio:1 / 1;
+    height:220px;
 
-    object-fit:cover;
+    object-fit:contain;
 
-    border-radius:10px;
+    padding:0;
 
-    border:1px solid #b7c7e8;
+    border:none;
+
+    border-radius:0;
+
+    background:transparent;
 
     transition:0.2s;
 }
