@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>学習ポータル</title>
+<title>伊豆の国市 学習者ポータル</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
 
@@ -27,9 +27,11 @@ body{
 .hero{
     position:relative;
     width:100%;
-    height:320px;
+    height:340px;
     background:url("pencil.jpg") center center/cover no-repeat;
 }
+
+/* 暗くする */
 
 .overlay{
     position:absolute;
@@ -37,20 +39,32 @@ body{
     background:rgba(0,0,0,0.35);
 }
 
-.hero-content{
+/* 左上タイトル */
+
+.top-title{
+    position:absolute;
+    top:18px;
+    left:20px;
+    color:white;
+    font-size:28px;
+    font-weight:400;
+    z-index:2;
+    text-shadow:0 2px 5px rgba(0,0,0,0.4);
+}
+
+/* 真ん中タイトル */
+
+.center-title{
     position:absolute;
     top:50%;
     left:50%;
     transform:translate(-50%,-50%);
-    text-align:center;
-    width:90%;
-}
-
-.hero h1{
     color:white;
-    font-weight:300;
     font-size:64px;
-    letter-spacing:2px;
+    font-weight:300;
+    text-align:center;
+    z-index:2;
+    width:90%;
 }
 
 /* ===== カード ===== */
@@ -68,74 +82,89 @@ body{
 }
 
 .card{
-    background:white;
-    border:1px solid #d9d9d9;
-    border-radius:12px;
-    padding:30px 20px;
-    text-align:center;
     text-decoration:none;
     color:#222;
-    transition:0.2s ease;
-    box-shadow:0 2px 5px rgba(0,0,0,0.08);
+    text-align:center;
 }
 
-.card:hover{
+.card-box{
+    background:white;
+    border:1px solid #b7c7e8;
+    border-radius:10px;
+    padding:25px;
+    height:220px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    transition:0.2s;
+}
+
+.card-box:hover{
     transform:translateY(-5px);
-    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+    box-shadow:0 8px 18px rgba(0,0,0,0.15);
 }
 
 .card img{
-    width:120px;
-    height:120px;
+    max-width:140px;
+    max-height:140px;
     object-fit:contain;
 }
 
 .card p{
-    margin-top:20px;
-    font-size:18px;
+    margin-top:14px;
+    font-size:15px;
 }
 
-/* ===== スマホ対応 ===== */
+/* NHKだけ少し大きめ */
+
+.nhk img{
+    max-width:160px;
+}
+
+/* ===== スマホ ===== */
 
 @media (max-width:768px){
 
     .hero{
-        height:220px;
+        height:240px;
     }
 
-    .hero h1{
-        font-size:38px;
+    .top-title{
+        font-size:20px;
+    }
+
+    .center-title{
+        font-size:36px;
         line-height:1.4;
     }
 
     .grid{
         grid-template-columns:1fr 1fr;
-        gap:15px;
+        gap:18px;
     }
 
-    .card{
-        padding:20px 10px;
+    .card-box{
+        height:180px;
+        padding:15px;
     }
 
     .card img{
-        width:80px;
-        height:80px;
-    }
-
-    .card p{
-        font-size:14px;
+        max-width:90px;
+        max-height:90px;
     }
 
 }
 
 @media (max-width:480px){
 
-    .hero h1{
-        font-size:30px;
-    }
-
     .grid{
         grid-template-columns:1fr;
+    }
+
+    .center-title{
+        font-size:28px;
     }
 
 }
@@ -145,41 +174,65 @@ body{
 
 <body>
 
-<!-- 上部画像 -->
+<!-- ===== 上部 ===== -->
 
 <section class="hero">
 
     <div class="overlay"></div>
 
-    <div class="hero-content">
-        <h1>伊豆の国市 学習ポータル</h1>
+    <!-- 左上 -->
+
+    <div class="top-title">
+        伊豆の国市 学習者ポータル
+    </div>
+
+    <!-- 真ん中 -->
+
+    <div class="center-title">
+        伊豆の国市 学習ポータル
     </div>
 
 </section>
 
-<!-- メニュー -->
+<!-- ===== メニュー ===== -->
 
 <div class="container">
 
     <div class="grid">
 
-        <a class="card" href="#">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Google_Workspace_Logo.svg">
-            <p>Google Workspace</p>
-        </a>
+        <!-- Google Workspace -->
 
         <a class="card" href="#">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/d/da/Google_Drive_logo.png">
+            <div class="card-box">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Google_Workspace_Logo.svg">
+            </div>
+            <p>アプリケーション</p>
+        </a>
+
+        <!-- Drive -->
+
+        <a class="card" href="#">
+            <div class="card-box">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/da/Google_Drive_logo.png">
+            </div>
             <p>マイドライブ</p>
         </a>
 
+        <!-- Classroom -->
+
         <a class="card" href="#">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Google_Classroom_Logo.png">
+            <div class="card-box">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Google_Classroom_Logo.png">
+            </div>
             <p>クラスルーム</p>
         </a>
 
-        <a class="card" href="#">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/NHK_logo_2020.svg">
+        <!-- NHK -->
+
+        <a class="card nhk" href="#">
+            <div class="card-box">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/NHK_for_School_logo.png">
+            </div>
             <p>NHK for School</p>
         </a>
 
