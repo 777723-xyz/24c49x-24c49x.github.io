@@ -122,9 +122,13 @@ body{
 
     width:100%;
 
-    aspect-ratio:1 / 1;
+    height:220px;
 
-    object-fit:cover;
+    object-fit:contain;
+
+    background:white;
+
+    padding:20px;
 
     border-radius:10px;
 
