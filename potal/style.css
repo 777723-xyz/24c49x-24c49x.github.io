@@ -98,7 +98,7 @@ body{
     display:grid;
 
     grid-template-columns:
-    repeat(auto-fit,minmax(190px,220px));
+    repeat(4,220px);
 
     justify-content:center;
 
