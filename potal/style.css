@@ -180,15 +180,14 @@ body{
 }
 
 /* ===== スマホ ===== */
-
-@media (max-width:480px){
+@media (max-width:768px){
 
     .grid{
-        grid-template-columns:1fr;
-    }
 
-    .center-title{
-        font-size:28px;
+        grid-template-columns:
+        repeat(2,1fr);
+
+        gap:18px;
     }
 
 }
