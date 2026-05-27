@@ -228,6 +228,29 @@
 「中学生」のみなさんへ</p>
     </a>
 
+  <!-- スクロール検知 -->
+
+            
+            <script>
+
+const scrollHeader =
+document.getElementById("scrollHeader");
+
+window.addEventListener("scroll", () => {
+
+    if(window.scrollY > 80){
+
+        scrollHeader.classList.add("show");
+
+    }else{
+
+        scrollHeader.classList.remove("show");
+    }
+
+});
+
+</script>
+            
         </div>
 
     </div>
