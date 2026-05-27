@@ -15,7 +15,9 @@ body{
 /* ===== 上部画像 ===== */
 
 .hero{
+
     position:relative;
+
     width:100%;
     height:340px;
 
@@ -33,23 +35,33 @@ body{
 /* ===== 左上タイトル ===== */
 
 .top-title{
+
     position:absolute;
+
     top:16px;
     left:20px;
+
     z-index:2;
 }
 
 .QTKDff{
+
     color:white;
+
     font-size:18px;
+
     font-weight:400;
+
     letter-spacing:0.3px;
-    text-shadow:0 2px 5px rgba(0,0,0,0.4);
+
+    text-shadow:
+    0 2px 5px rgba(0,0,0,0.4);
 }
 
 /* ===== 真ん中タイトル ===== */
 
 .center-title{
+
     position:absolute;
 
     top:50%;
@@ -60,6 +72,7 @@ body{
     color:white;
 
     font-size:64px;
+
     font-weight:300;
 
     text-align:center;
@@ -70,18 +83,24 @@ body{
 /* ===== コンテナ ===== */
 
 .container{
+
     max-width:1200px;
+
     margin:auto;
+
     padding:40px 20px;
 }
 
 /* ===== グリッド ===== */
 
 .grid{
+
     display:grid;
 
     grid-template-columns:
-    repeat(auto-fit,minmax(220px,1fr));
+    repeat(auto-fit,minmax(190px,220px));
+
+    justify-content:center;
 
     gap:30px;
 }
@@ -89,37 +108,34 @@ body{
 /* ===== カード ===== */
 
 .card{
+
     text-decoration:none;
+
     color:#222;
+
     text-align:center;
 }
 
-/* ===== カード本体 ===== */
+/* ===== 画像 ===== */
 
-.card-box{
-
-    background:white;
-
-    border:1px solid #b7c7e8;
-
-    border-radius:10px;
-
-    aspect-ratio:1 / 1;
+.app-image{
 
     width:100%;
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    aspect-ratio:1 / 1;
 
-    padding:25px;
+    object-fit:cover;
+
+    border-radius:10px;
+
+    border:1px solid #b7c7e8;
 
     transition:0.2s;
 }
 
-/* ホバー */
+/* ===== ホバー ===== */
 
-.card-box:hover{
+.app-image:hover{
 
     transform:translateY(-5px);
 
@@ -127,25 +143,13 @@ body{
     0 8px 18px rgba(0,0,0,0.15);
 }
 
-/* ===== 画像 ===== */
-
-.card img{
-    max-width:140px;
-    max-height:140px;
-    object-fit:contain;
-}
-
 /* ===== 下の文字 ===== */
 
 .card p{
+
     margin-top:14px;
+
     font-size:15px;
-}
-
-/* ===== NHKだけ大きめ ===== */
-
-.nhk img{
-    max-width:170px;
 }
 
 /* ===== タブレット ===== */
@@ -161,28 +165,27 @@ body{
     }
 
     .center-title{
+
         font-size:36px;
+
         line-height:1.4;
     }
 
     .grid{
-        grid-template-columns:1fr 1fr;
+
+        grid-template-columns:
+        repeat(2,minmax(140px,1fr));
+
         gap:18px;
     }
 
-    .card-box{
-        height:180px;
-        padding:15px;
-    }
-
-    .card img{
-        max-width:90px;
-        max-height:90px;
+    .card p{
+        font-size:14px;
     }
 
 }
 
-/* ==== スマホ ==== */
+/* ===== スマホ ===== */
 
 @media (max-width:480px){
 
