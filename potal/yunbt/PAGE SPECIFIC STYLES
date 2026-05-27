@@ -1,0 +1,56 @@
+/* =========================================
+3. PAGE SPECIFIC STYLES
+========================================= */
+
+/* From Links Page */
+.proxy-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; width: 100%; margin: 20px 0; }
+.proxy-card { background: rgba(0, 0, 0, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); padding: 8px 10px; border-radius: 8px; display: flex; align-items: center; gap: 10px; cursor: pointer; transition: transform 0.2s ease, border-color 0.2s ease; backdrop-filter: blur(5px); min-height: 50px; }
+.proxy-card:hover { background: rgba(255, 255, 255, 0.15); border-color: #58c114; transform: translateY(-2px); }
+.proxy-card.selected { border-color: #58c114; background: rgba(88, 193, 20, 0.2); }
+.proxy-check { display: flex; align-items: center; }
+.proxy-checkbox { width: 16px; height: 16px; accent-color: #58c114; cursor: pointer; z-index: 2; }
+.proxy-info { display: flex; flex-direction: column; overflow: hidden; flex: 1; justify-content: center; }
+.site-tag { font-size: 0.65rem; font-weight: bold; color: #00ff88; text-transform: uppercase; opacity: 0.8; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.proxy-link { font-size: 0.85rem; color: #4fc3f7; text-decoration: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block; }
+.load-container { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 15px; padding: 30px 0; width: 100%; border-top: 1px solid rgba(255, 255, 255, 0.1); margin-top: 20px; }
+.custom-load-group { display: flex; align-items: center; gap: 5px; background: rgba(0, 0, 0, 0.3); padding: 5px 10px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.1); }
+.small-input { width: 50px; padding: 5px; border-radius: 4px; border: 1px solid #555; background: #222; color: white; text-align: center; font-family: "Fredoka", sans-serif; }
+.status-text { width: 100%; text-align: center; color: #aaa; font-size: 0.9rem; margin-top: 5px; }
+
+/* From Bookmarklets Page */
+#bookmarklets-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; padding: 40px 20px; max-width: 1200px; margin: 0 auto; }
+.bookmarkletdiv { background: rgba(0, 0, 0, 0.4); border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); padding: 25px; border-radius: 16px; transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s; display: flex; flex-direction: column; align-items: center; text-align: center; margin-bottom: 15px; }
+.bookmarkletdiv:hover { transform: translateY(-8px); border-color: #1E88EF; box-shadow: 0 10px 30px rgba(30, 136, 239, 0.2); }
+.bookmarklet { background-color: #1E88EF; color: white; text-decoration: none; padding: 12px 20px; border-radius: 8px; font-weight: bold; width: 100%; margin-bottom: 15px; display: inline-block; box-shadow: 0 4px 15px rgba(30, 136, 239, 0.3); cursor: pointer; }
+.bookmarkletdiv p { color: #bbb; font-size: 0.95rem; line-height: 1.5; margin: 0; }
+
+/* From About Page (Scoped to avoid conflict) */
+#view-about h1 { color: red; } 
+#view-about a { color: lightgreen; }
+
+/* =========================================
+4. Sections
+========================================= */
+.spa-section {
+  display: none; /* Hidden by default */
+  animation: fadeIn 0.4s ease-out;
+  max-width: 100%;
+
+  align-items: center;
+
+}
+.spa-section.active-section {
+  display: flex; /* Show when active */
+  max-width: 100%;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  width: 55vw;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+#blueDisgust {
+  color: white;
+}
